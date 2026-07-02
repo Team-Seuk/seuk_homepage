@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>개발 일지 — SEUK</title>
+    <meta name="description" content="Team-Seuk이 만들면서 남기는 기록." />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" />
+    <script type="module" src="/src/pages/log.ts"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+    <div class="seuk-progress" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="site-logo" href="../">SEUK<span class="logo-dot">.</span></a>
+      <nav class="site-nav" aria-label="주요 메뉴">
+        <a href="../">메인</a>
+        <a href="../projects/">프로젝트</a>
+        <a href="../members/">멤버</a>
+        <a href="./" aria-current="page">개발 일지</a>
+        <a href="https://github.com/Team-Seuk" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="log-hero">
+        <div class="container">
+          <p class="log-eyebrow seuk-reveal">Dev Log</p>
+          <h1 class="log-page-title seuk-reveal" data-seuk-delay="1"><span class="seuk-skew">개발 일지</span></h1>
+          <p class="log-lede seuk-reveal" data-seuk-delay="2">만들면서 남기는 기록.</p>
+        </div>
+      </section>
+      <section class="log-list-wrap" aria-label="일지 목록">
+        <div class="container">
+          <div class="log-list">
+            <!-- src/data/devlog.ts의 항목이 여기에 렌더된다 -->
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>© Team-Seuk</p>
+      <p>
+        <a href="https://github.com/Team-Seuk" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="mailto:team@example.com">team@example.com</a>
+      </p>
+    </footer>
+  </body>
+</html>

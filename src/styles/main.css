@@ -1,0 +1,412 @@
+/* 메인 페이지 전용 스타일 — 토큰은 전부 theme.css */
+
+/* ===== 히어로 ===== */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100dvh;
+  overflow: clip;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-block: var(--sp-4xl);
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-hero);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+/* '슥' — 액센트 + 왼쪽 잔상 트레일 */
+.hero-word {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-accent {
+  position: relative;
+  color: var(--accent);
+}
+
+.hero-ghosts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-ghosts span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--accent);
+}
+
+.hero-ghosts span:nth-child(1) {
+  transform: translateX(-0.12em);
+  opacity: 0.24;
+}
+
+.hero-ghosts span:nth-child(2) {
+  transform: translateX(-0.24em);
+  opacity: 0.12;
+}
+
+.hero-ghosts span:nth-child(3) {
+  transform: translateX(-0.36em);
+  opacity: 0.05;
+}
+
+.hero-sub {
+  max-width: 34ch;
+  margin-top: var(--sp-lg);
+  font-size: var(--fs-h3);
+  line-height: 1.5;
+  color: var(--text-dim);
+}
+
+/* 스크롤 유도 */
+.hero-scroll {
+  position: absolute;
+  inset: auto 0 var(--sp-xl) 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-sm);
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  color: var(--text-faint);
+  pointer-events: none;
+}
+
+html.js .scroll-arrow {
+  animation: scroll-bob calc(var(--duration-entrance) * 2) var(--ease-out) infinite alternate;
+}
+
+@keyframes scroll-bob {
+  to {
+    transform: translateY(var(--sp-xs));
+  }
+}
+
+/* ===== 쇼케이스 ===== */
+.showcase {
+  border-top: 1px solid var(--border);
+}
+
+#projects {
+  scroll-margin-top: var(--sp-2xl);
+}
+
+.case {
+  display: flex;
+  align-items: center;
+  min-height: 100dvh;
+  padding-block: var(--sp-3xl);
+  overflow: clip;
+  color: inherit;
+  text-decoration: none;
+}
+
+.case:focus-visible {
+  outline-offset: calc(var(--sp-xs) * -2);
+}
+
+.case--yaksok {
+  background: var(--bg);
+}
+
+.case--stock {
+  background: var(--accent);
+  color: var(--ink-on-accent);
+}
+
+.case--stock:focus-visible {
+  outline-color: var(--ink-on-accent);
+}
+
+.case-grid {
+  display: grid;
+  gap: var(--sp-2xl);
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .case-grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: var(--sp-3xl);
+  }
+
+  .case--stock .case-media {
+    order: -1;
+  }
+}
+
+.case-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-h1);
+  line-height: 1.05;
+  color: var(--text);
+}
+
+.case-name-text {
+  white-space: nowrap;
+}
+
+.case--stock .case-name {
+  color: var(--bg);
+}
+
+.case-sub-label {
+  margin-left: var(--sp-sm);
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--ink-on-accent);
+}
+
+.case-desc {
+  margin-top: var(--sp-lg);
+  font-size: var(--fs-h3);
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.case--stock .case-desc {
+  color: var(--ink-on-accent);
+}
+
+.case-tag {
+  margin-top: var(--sp-md);
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  color: var(--text-dim);
+}
+
+.case--stock .case-tag {
+  color: var(--ink-on-accent);
+}
+
+/* hover 시 슥 나타나는 화살표 */
+.case-arrow {
+  display: inline-block;
+  margin-left: var(--sp-md);
+  color: var(--accent);
+  vertical-align: middle;
+  transition:
+    opacity var(--duration-normal) var(--ease-out),
+    transform var(--duration-normal) var(--ease-out);
+}
+
+.case-arrow svg {
+  width: 0.6em;
+  height: 0.6em;
+}
+
+.case--stock .case-arrow {
+  color: var(--bg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .case-arrow {
+    opacity: 0;
+    transform: translateX(calc(var(--sp-lg) * -1));
+  }
+
+  .case:hover .case-arrow {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.case:focus-visible .case-arrow {
+  opacity: 1;
+  transform: none;
+}
+
+/* 모티프 (플레이스홀더 그래픽) */
+.case-media {
+  max-width: 27rem;
+  border-radius: var(--radius);
+  padding: var(--sp-xl);
+}
+
+.case--yaksok .case-media {
+  background: var(--bg-elev);
+}
+
+.case--stock .case-media {
+  background: color-mix(in srgb, var(--ink-on-accent) 10%, transparent);
+}
+
+.case-motif {
+  transition: transform var(--duration-normal) var(--ease-out);
+}
+
+.case-motif svg {
+  width: 100%;
+  height: auto;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .case:hover .case-motif {
+    transform: scale(1.03);
+  }
+}
+
+.case:focus-visible .case-motif {
+  transform: scale(1.03);
+}
+
+/* 스크롤 진행에 따라 모티프가 떠오름 — 미지원 시 .seuk-reveal 폴백 */
+@supports (animation-timeline: view()) {
+  html.js .case-media.seuk-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    animation: case-rise linear both;
+    animation-timeline: view();
+    animation-range: entry 10% entry 55%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html.js .case-media.seuk-reveal {
+      animation: none;
+    }
+  }
+}
+
+@keyframes case-rise {
+  from {
+    opacity: 0;
+    transform: translateY(var(--sp-4xl));
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ===== 팀 티저 ===== */
+.teaser {
+  padding-block: var(--sp-4xl);
+  border-top: 1px solid var(--border);
+}
+
+@media (min-width: 1024px) {
+  .teaser {
+    padding-block: calc(var(--sp-4xl) + var(--sp-2xl));
+  }
+}
+
+.teaser-line {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-h2);
+  color: var(--text);
+}
+
+.teaser-accent {
+  color: var(--accent);
+}
+
+.teaser-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-sm);
+  min-height: 44px;
+  margin-top: var(--sp-md);
+  font-weight: 700;
+  color: var(--accent-deep);
+  text-decoration: none;
+}
+
+.teaser-link .link-arrow {
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.teaser-link:hover,
+.teaser-link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.teaser-link:hover .link-arrow,
+.teaser-link:focus-visible .link-arrow {
+  transform: translateX(var(--sp-xs));
+}
+
+/* 히어로 진입 — 화면 밖 왼쪽에서 슥. 키프레임이라 새로고침·재방문마다 항상 재생 */
+.hero-enter {
+  animation: hero-enter calc(var(--duration-entrance) * 1.4) var(--ease-out) both;
+}
+
+.hero-enter--sub {
+  animation-delay: calc(var(--duration-fast) * 0.75);
+}
+
+@keyframes hero-enter {
+  from {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 히어로 스크롤 퇴장 — 진행에 비례해 오른쪽으로 슥, 끝에서 소멸 (main.ts가 --hero-exit 갱신) */
+.hero {
+  overflow-x: clip;
+}
+
+.hero-inner {
+  --hero-exit: 0;
+  transform: translateX(calc(var(--hero-exit) * 90vw));
+  opacity: calc(1 - var(--hero-exit) * 1.2);
+}
+
+/* ===== 모션 감소 ===== */
+@media (prefers-reduced-motion: reduce) {
+  .hero-enter {
+    animation: none;
+  }
+
+  .hero-inner {
+    transform: none;
+    opacity: 1;
+  }
+
+  html.js .scroll-arrow {
+    animation: none;
+  }
+
+  .case-arrow,
+  .case-motif,
+  .teaser-link .link-arrow {
+    transition: none;
+  }
+
+  .case:hover .case-motif,
+  .case:focus-visible .case-motif {
+    transform: none;
+  }
+
+  .teaser-link:hover .link-arrow,
+  .teaser-link:focus-visible .link-arrow {
+    transform: none;
+  }
+}

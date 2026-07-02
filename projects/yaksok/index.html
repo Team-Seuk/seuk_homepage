@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yaksok — SEUK</title>
+    <meta name="description" content="알약을 카메라로 비추면 개인 건강정보와 현재 시각에 맞춰 LLM이 용법·주의사항을 안내하는 반응형 웹앱." />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" />
+    <script type="module" src="/src/pages/yaksok.ts"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+    <div class="seuk-progress" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="site-logo" href="../../">SEUK<span class="logo-dot">.</span></a>
+      <nav class="site-nav" aria-label="주요 메뉴">
+        <a href="../../">메인</a>
+        <a href="../">프로젝트</a>
+        <a href="../../members/">멤버</a>
+        <a href="../../log/">개발 일지</a>
+        <a href="https://github.com/Team-Seuk" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </header>
+    <main id="main">
+      <!-- 프로젝트 히어로 -->
+      <section class="p-hero">
+        <div class="container">
+          <p class="p-eyebrow seuk-reveal">Project</p>
+          <h1 class="p-title seuk-reveal" data-seuk-delay="1">
+            <span class="p-title-text seuk-skew">Yaksok</span>
+          </h1>
+          <p class="p-def seuk-reveal" data-seuk-delay="2">
+            알약을 카메라로 비추면 개인 건강정보와 현재 시각에 맞춰 LLM이 용법과 주의사항을 안내하는 반응형 웹앱.
+          </p>
+          <ul class="p-tags seuk-reveal" data-seuk-delay="3">
+            <li>의료 · 헬스케어</li>
+            <li>2026</li>
+            <li>FastAPI · React · LLM</li>
+          </ul>
+          <div class="p-actions seuk-reveal" data-seuk-delay="3">
+            <a class="p-btn p-btn--primary" href="https://github.com/Team-Seuk/Yaksok" target="_blank" rel="noopener">
+              repo 보기 <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 문제 → 해결 -->
+      <section class="p-section">
+        <div class="container">
+          <p class="p-eyebrow seuk-reveal">Problem → Solution</p>
+          <h2 class="p-section-title seuk-reveal" data-seuk-delay="1">
+            이름 모를 알약에서, 지금 필요한 안내로
+          </h2>
+          <div class="p-duo">
+            <div class="p-duo-col seuk-reveal" data-seuk-delay="1">
+              <h3>문제</h3>
+              <p>
+                약 이름을 모르면 용법도 주의사항도 찾기 어렵다. 이름을 알아도 복약 시점과 개인
+                건강 조건에 따라 답이 달라져, 검색 결과는 늘 '내 경우'가 아니다.
+              </p>
+            </div>
+            <div class="p-duo-col p-duo-col--solve seuk-reveal" data-seuk-delay="2">
+              <h3>해결</h3>
+              <p>
+                촬영 한 번이면 된다. 알약을 인식한 뒤 개인 건강정보와 현재 시각을 반영해, 지금
+                이 사람에게 필요한 용법과 주의사항만 안내한다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 핵심 기능 -->
+      <section class="p-section">
+        <div class="container">
+          <p class="p-eyebrow seuk-reveal">Features</p>
+          <h2 class="p-section-title seuk-reveal" data-seuk-delay="1">핵심 기능</h2>
+          <div class="p-features">
+            <article class="p-feature seuk-reveal">
+              <div class="p-frame-slot">
+                <!-- 스크린샷 확정 시 .p-frame을 img로 교체 -->
+                <div class="p-frame" aria-hidden="true">
+                  <span class="p-frame-note">촬영 화면<br />준비 중</span>
+                </div>
+              </div>
+              <div class="p-feature-body">
+                <h3>비추면 안다</h3>
+                <p>
+                  카메라로 알약을 비추면 촬영 한 번으로 어떤 약인지 식별한다. 약봉투도, 검색어도
+                  필요 없다.
+                </p>
+              </div>
+            </article>
+            <article class="p-feature seuk-reveal">
+              <div class="p-frame-slot">
+                <div class="p-frame" aria-hidden="true">
+                  <span class="p-frame-note">안내 화면<br />준비 중</span>
+                </div>
+              </div>
+              <div class="p-feature-body">
+                <h3>지금의 나에게 맞는 안내</h3>
+                <p>
+                  개인 건강정보와 현재 시각을 반영해 LLM이 안내를 생성한다. 같은 약이라도 아침의
+                  나와 자기 전의 나는 다른 답을 받는다.
+                </p>
+              </div>
+            </article>
+            <article class="p-feature seuk-reveal">
+              <div class="p-frame-slot">
+                <div class="p-frame" aria-hidden="true">
+                  <span class="p-frame-note">주의사항 화면<br />준비 중</span>
+                </div>
+              </div>
+              <div class="p-feature-body">
+                <h3>주의사항이 먼저 읽힌다</h3>
+                <p>
+                  병용 금기, 부작용 같은 주의 정보는 장식 없이 가독성 우선으로 보여준다. 의료
+                  도메인에서는 명료함이 곧 신뢰다.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 기술 -->
+      <section class="p-section">
+        <div class="container">
+          <p class="p-eyebrow seuk-reveal">Tech</p>
+          <h2 class="p-section-title seuk-reveal" data-seuk-delay="1">기술</h2>
+          <ul class="p-stack seuk-reveal" data-seuk-delay="1">
+            <li>FastAPI</li>
+            <li>Python 3.12</li>
+            <li>uv</li>
+            <li>React 19</li>
+            <li>Vite</li>
+            <li>TypeScript</li>
+            <li>LLM</li>
+          </ul>
+          <p class="p-flow seuk-reveal" data-seuk-delay="2">
+            <span>촬영</span>
+            <span class="p-flow-arrow">→</span>
+            <span>인식</span>
+            <span class="p-flow-arrow">→</span>
+            <span>개인화 안내</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- 역할 분담 -->
+      <section class="p-section">
+        <div class="container">
+          <p class="p-eyebrow seuk-reveal">Team</p>
+          <h2 class="p-section-title seuk-reveal" data-seuk-delay="1">역할 분담</h2>
+          <!-- 실명 확정 시: .p-role-avatar 이니셜과 .p-role-name 텍스트만 교체 -->
+          <ul class="p-roles">
+            <li class="p-role seuk-reveal">
+              <span class="p-role-avatar" aria-hidden="true">S1</span>
+              <span class="p-role-name">멤버 이름 (확정 대기)</span>
+              <span class="p-role-duty">백엔드 — FastAPI API · 인식 파이프라인 연결</span>
+            </li>
+            <li class="p-role seuk-reveal" data-seuk-delay="1">
+              <span class="p-role-avatar" aria-hidden="true">S2</span>
+              <span class="p-role-name">멤버 이름 (확정 대기)</span>
+              <span class="p-role-duty">프론트엔드 — React 촬영·안내 화면</span>
+            </li>
+            <li class="p-role seuk-reveal" data-seuk-delay="2">
+              <span class="p-role-avatar" aria-hidden="true">S3</span>
+              <span class="p-role-name">멤버 이름 (확정 대기)</span>
+              <span class="p-role-duty">LLM — 프롬프트 설계 · 개인화 안내 생성</span>
+            </li>
+            <li class="p-role seuk-reveal" data-seuk-delay="3">
+              <span class="p-role-avatar" aria-hidden="true">S4</span>
+              <span class="p-role-name">멤버 이름 (확정 대기)</span>
+              <span class="p-role-duty">데이터 — 알약 식별 데이터 · 검증</span>
+            </li>
+            <li class="p-role seuk-reveal" data-seuk-delay="3">
+              <span class="p-role-avatar" aria-hidden="true">S5</span>
+              <span class="p-role-name">멤버 이름 (확정 대기)</span>
+              <span class="p-role-duty">기획·디자인 — 사용 흐름 설계 · 발표</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 회고 -->
+      <section class="p-section">
+        <div class="container">
+          <p class="p-eyebrow seuk-reveal">Retrospect</p>
+          <h2 class="p-section-title seuk-reveal" data-seuk-delay="1">회고</h2>
+          <!-- 팀 회고 확정 시 아래 문단 교체 -->
+          <div class="p-retro-body seuk-reveal" data-seuk-delay="2">
+            <p>
+              약 이름을 알려주는 일도 "누가, 언제 먹는가"가 붙는 순간 전혀 다른 문제가 된다는 걸
+              배웠다.
+            </p>
+            <p>의료 도메인에서는 기능을 더하는 것보다 표현을 덜어내는 쪽이 신뢰를 만들었다.</p>
+            <p class="p-retro-note">팀 회고 확정 후 교체 예정.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 다음 프로젝트 -->
+      <nav aria-label="다음 프로젝트">
+        <a class="p-next-link seuk-reveal" href="../stock-ai/">
+          <div class="container">
+            <span class="p-eyebrow">Next Project</span>
+            <span class="p-next-title">재고관리 AI <span class="p-next-arrow" aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </nav>
+    </main>
+    <footer class="site-footer">
+      <p>© Team-Seuk</p>
+      <p>
+        <a href="https://github.com/Team-Seuk" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="mailto:team@example.com">team@example.com</a>
+      </p>
+    </footer>
+  </body>
+</html>

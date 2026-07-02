@@ -1,0 +1,128 @@
+/* 프로젝트 목록 페이지 */
+.pl-hero {
+  padding: calc(var(--sp-4xl) + var(--sp-2xl)) 0 var(--sp-2xl);
+}
+
+.pl-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  color: var(--accent-deep);
+  margin-bottom: var(--sp-md);
+}
+
+.pl-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-h1);
+  letter-spacing: -0.02em;
+}
+
+.pl-title .seuk-skew {
+  display: inline-block;
+}
+
+.pl-lede {
+  margin-top: var(--sp-md);
+  font-size: var(--fs-h3);
+  color: var(--text-dim);
+  max-width: 65ch;
+}
+
+.pl-list-wrap {
+  padding-bottom: var(--sp-4xl);
+}
+
+.pl-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--sp-lg);
+}
+
+.pl-card {
+  display: block;
+  padding: var(--sp-xl) var(--sp-lg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  background: var(--bg);
+  transition:
+    background var(--duration-normal) var(--ease-out),
+    border-color var(--duration-normal) var(--ease-out);
+}
+
+.pl-card:hover {
+  background: var(--bg-elev);
+  border-color: var(--border-strong);
+}
+
+.pl-card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-md);
+}
+
+.pl-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-h2);
+  letter-spacing: -0.01em;
+}
+
+.pl-note {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--fs-small);
+  color: var(--text-faint);
+  margin-left: var(--sp-sm);
+}
+
+.pl-arrow {
+  font-size: var(--fs-h3);
+  color: var(--accent);
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.pl-card:hover .pl-arrow,
+.pl-card:focus-visible .pl-arrow {
+  transform: translateX(var(--sp-sm));
+}
+
+.pl-status {
+  display: inline-block;
+  margin-top: var(--sp-sm);
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  color: var(--accent-deep);
+  border: 1px solid var(--accent-line);
+  border-radius: 999px;
+  padding: calc(var(--sp-xs) / 2) var(--sp-md);
+}
+
+.pl-desc {
+  margin-top: var(--sp-md);
+  font-size: var(--fs-h3);
+  color: var(--text);
+  max-width: 65ch;
+}
+
+.pl-tags {
+  margin-top: var(--sp-md);
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  color: var(--text-dim);
+}
+
+@media (min-width: 768px) {
+  .pl-card {
+    padding: var(--sp-2xl) var(--sp-xl);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pl-arrow {
+    transition: none;
+  }
+}

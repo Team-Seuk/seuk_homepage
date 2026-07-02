@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>프로젝트 — SEUK</title>
+    <meta name="description" content="Team-Seuk이 지금까지 만든 것과 만들고 있는 것." />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" />
+    <script type="module" src="/src/pages/projects.ts"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+    <div class="seuk-progress" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="site-logo" href="../">SEUK<span class="logo-dot">.</span></a>
+      <nav class="site-nav" aria-label="주요 메뉴">
+        <a href="../">메인</a>
+        <a href="./" aria-current="page">프로젝트</a>
+        <a href="../members/">멤버</a>
+        <a href="../log/">개발 일지</a>
+        <a href="https://github.com/Team-Seuk" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="pl-hero">
+        <div class="container">
+          <p class="pl-eyebrow seuk-reveal">Projects</p>
+          <h1 class="pl-title seuk-reveal" data-seuk-delay="1"><span class="seuk-skew">프로젝트</span></h1>
+          <p class="pl-lede seuk-reveal" data-seuk-delay="2">지금까지 만든 것과, 만들고 있는 것.</p>
+        </div>
+      </section>
+      <section class="pl-list-wrap" aria-label="프로젝트 목록">
+        <div class="container">
+          <ul class="pl-list">
+            <li>
+              <a class="pl-card seuk-reveal" href="yaksok/">
+                <div class="pl-card-head">
+                  <h2 class="pl-name">Yaksok</h2>
+                  <span class="pl-arrow" aria-hidden="true">→</span>
+                </div>
+                <p class="pl-desc">알약을 비추면, 복약 안내가 나온다.</p>
+                <p class="pl-tags">헬스케어 · FastAPI · React 19 · LLM</p>
+              </a>
+            </li>
+            <li>
+              <a class="pl-card seuk-reveal" data-seuk-delay="1" href="stock-ai/">
+                <div class="pl-card-head">
+                  <h2 class="pl-name">재고관리 AI <span class="pl-note">(가제)</span></h2>
+                  <span class="pl-arrow" aria-hidden="true">→</span>
+                </div>
+                <p class="pl-status">개발 진행 중</p>
+                <p class="pl-desc">재고, 발주 관리를 10배의 속도로</p>
+                <p class="pl-tags">리테일 · 비전 AI</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>© Team-Seuk</p>
+      <p>
+        <a href="https://github.com/Team-Seuk" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="mailto:team@example.com">team@example.com</a>
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+:root {
+  /* 색 */
+  --bg: #ffffff;
+  --bg-elev: #fff4ed;
+  --bg-elev-2: #ffe9dd;
+  --text: #211815;
+  --text-dim: #6b5d55;
+  --text-faint: #9a8a80;
+  --accent: #ff4d00;        /* 대형 타이포(24px+ bold)·그래픽 전용 */
+  --accent-deep: #d63a00;   /* 본문·작은 텍스트·아웃라인용 (4.7:1) */
+  --accent-soft: #ffe9dd;
+  --accent-line: #ffc9af;
+  --ink-on-accent: #2b0e00; /* 오렌지 풀블리드 위 작은 텍스트 */
+  --border: #f0e4dc;
+  --border-strong: #d9c8bd;
+  --radius: 16px;
+
+  /* 간격 — 4px 기반 */
+  --sp-xs: 4px;
+  --sp-sm: 8px;
+  --sp-md: 16px;
+  --sp-lg: 24px;
+  --sp-xl: 32px;
+  --sp-2xl: 48px;
+  --sp-3xl: 64px;
+  --sp-4xl: 96px;
+
+  /* 타이포 */
+  --font-display: 'Paperlogy', 'Pretendard Variable', sans-serif;
+  --font-body: 'Pretendard Variable', Pretendard, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --fs-hero: clamp(3.25rem, 11vw, 8rem);
+  --fs-h1: clamp(2.5rem, 7vw, 5rem);
+  --fs-h2: clamp(1.875rem, 4.5vw, 3rem);
+  --fs-h3: clamp(1.25rem, 2.5vw, 1.625rem);
+  --fs-body: 1.0625rem;
+  --fs-small: 0.875rem;
+  --fs-xs: 0.8125rem;
+
+  /* 모션 */
+  --duration-fast: 160ms;
+  --duration-normal: 320ms;
+  --duration-entrance: 480ms;
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* 레이아웃 */
+  --container-max: 1200px;
+  --page-pad: 16px;
+
+  /* z-index */
+  --z-header: 100;
+  --z-progress: 110;
+
+  /* seuk.ts가 스크롤 속도로 갱신 */
+  --seuk-vel: 0;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --page-pad: 24px;
+  }
+}

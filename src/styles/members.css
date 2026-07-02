@@ -1,0 +1,226 @@
+/* 멤버 페이지 전용 — 색·간격·타이포·모션 값은 전부 theme.css 토큰 */
+
+/* 1. 팀 서사 히어로 */
+.members-hero {
+  padding-block: calc(var(--sp-4xl) + var(--sp-2xl)) var(--sp-4xl);
+}
+
+.members-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  margin-bottom: var(--sp-md);
+}
+
+.members-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-h1);
+  letter-spacing: -0.015em;
+  max-width: 14ch;
+}
+
+/* --accent는 대형 디스플레이 타이포(24px+ bold) 안에서만 */
+.accent-word {
+  color: var(--accent);
+}
+
+.members-lede {
+  max-width: 65ch;
+  margin-top: var(--sp-xl);
+  display: grid;
+  gap: var(--sp-md);
+}
+
+/* 2. 숫자 스트립 */
+.members-stats {
+  border-block: 1px solid var(--border);
+  padding-block: var(--sp-2xl);
+}
+
+.stats-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-lg) var(--sp-3xl);
+}
+
+.stat {
+  /* DOM은 dt→dd 순서 유지, 시각은 숫자 먼저 */
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--sp-xs);
+}
+
+.stat dt {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--text-dim);
+}
+
+.stat dd {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  font-size: var(--fs-h2); /* 최소 30px — 대형 타이포 조건에서만 --accent */
+  line-height: 1.1;
+  color: var(--accent);
+}
+
+/* 3. 풀 프로필 그리드 — 모바일 1열 → 태블릿 2열 → 데스크탑 3열(3+2) */
+.members-roster {
+  padding-block: var(--sp-4xl);
+}
+
+.members-roster h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-h2);
+  margin-bottom: var(--sp-xl);
+}
+
+.member-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-md);
+}
+
+@media (min-width: 768px) {
+  .member-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .member-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sp-sm);
+  background: var(--bg-elev);
+  border-radius: var(--radius);
+  padding: var(--sp-lg);
+}
+
+.member-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--sp-2xl) + var(--sp-sm)); /* 56px */
+  height: calc(var(--sp-2xl) + var(--sp-sm));
+  border-radius: 50%;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
+  color: var(--accent-deep);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: var(--fs-h3);
+  margin-bottom: var(--sp-sm);
+}
+
+.member-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-h3);
+}
+
+.member-role {
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--accent-deep);
+}
+
+.member-bio {
+  color: var(--text-dim);
+  flex-grow: 1; /* 링크를 카드 하단에 정렬 */
+}
+
+.member-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--accent-deep);
+  text-underline-offset: 3px;
+  text-decoration-color: var(--accent-line);
+  transition: text-decoration-color var(--duration-fast) var(--ease-out);
+}
+
+.member-link:hover {
+  text-decoration-color: currentColor;
+}
+
+/* 4. 연락 — primary(아웃라인 메일)는 화면당 1개 */
+.members-contact {
+  padding-block: var(--sp-3xl) calc(var(--sp-4xl) + var(--sp-xl));
+}
+
+.members-contact h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-h2);
+}
+
+.contact-lede {
+  max-width: 65ch;
+  margin-top: var(--sp-md);
+  color: var(--text-dim);
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-md) var(--sp-lg);
+  margin-top: var(--sp-xl);
+}
+
+.contact-mail {
+  display: inline-flex;
+  align-items: center;
+  min-height: calc(var(--sp-2xl) + var(--sp-xs)); /* 52px ≥ 44px 터치 타깃 */
+  padding-inline: var(--sp-lg);
+  border: 2px solid var(--accent-deep);
+  border-radius: 999px;
+  color: var(--accent-deep);
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
+}
+
+.contact-mail:hover {
+  background: var(--accent-deep);
+  color: var(--bg);
+}
+
+.contact-github {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--text);
+  font-weight: 600;
+  text-underline-offset: 3px;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.contact-github:hover {
+  color: var(--accent-deep);
+}

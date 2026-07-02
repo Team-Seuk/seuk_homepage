@@ -1,0 +1,251 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  min-height: 100dvh;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.15;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent-deep);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--sp-md);
+  top: -100%;
+  z-index: calc(var(--z-progress) + 1);
+  background: var(--bg);
+  color: var(--accent-deep);
+  padding: var(--sp-sm) var(--sp-md);
+  border-radius: 8px;
+}
+
+.skip-link:focus {
+  top: var(--sp-md);
+}
+
+.container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--page-pad);
+}
+
+/* 헤더 */
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: var(--z-header);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-xs) var(--page-pad);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.site-logo {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.site-logo .logo-dot {
+  color: var(--accent);
+}
+
+.site-nav {
+  display: flex;
+  gap: var(--sp-xs);
+}
+
+.site-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 var(--sp-md);
+  text-decoration: none;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--text);
+  border-radius: 999px;
+  transition:
+    background var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
+}
+
+.site-nav a:hover {
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+}
+
+@media (max-width: 639px) {
+  .site-header {
+    gap: var(--sp-sm);
+  }
+
+  .site-nav {
+    gap: 0;
+    min-width: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site-nav a {
+    padding: 0 var(--sp-sm);
+    font-size: var(--fs-xs);
+    flex-shrink: 0;
+  }
+
+  .site-logo {
+    font-size: 1.125rem;
+    flex-shrink: 0;
+  }
+}
+
+/* 푸터 */
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-sm) var(--sp-lg);
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-lg) var(--page-pad);
+  border-top: 1px solid var(--border);
+  color: var(--text-dim);
+  font-size: var(--fs-small);
+}
+
+.site-footer a {
+  color: var(--text-dim);
+  text-underline-offset: 3px;
+}
+
+.site-footer a:hover {
+  color: var(--accent-deep);
+}
+
+/* 스크롤 프로그레스 바 */
+.seuk-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-progress);
+  width: 100%;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left center;
+  pointer-events: none;
+}
+
+/* '슥' 등장 문법 — seuk.ts가 .is-in 부여 */
+html.js .seuk-reveal {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition:
+    opacity var(--duration-entrance) var(--ease-out),
+    transform var(--duration-entrance) var(--ease-out);
+}
+
+html.js .seuk-reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+html.js .seuk-reveal[data-seuk-delay='1'] {
+  transition-delay: 80ms;
+}
+
+html.js .seuk-reveal[data-seuk-delay='2'] {
+  transition-delay: 160ms;
+}
+
+html.js .seuk-reveal[data-seuk-delay='3'] {
+  transition-delay: 240ms;
+}
+
+/* velocity 스큐 — 시그니처 요소에만 국소 사용 */
+.seuk-skew {
+  transform: skewX(calc(var(--seuk-vel) * -0.12deg));
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js .seuk-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .seuk-skew {
+    transform: none;
+    will-change: auto;
+  }
+}

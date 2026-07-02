@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>멤버 — SEUK</title>
+    <meta name="description" content="다섯 명이 역할을 갈아끼우며 빠르게 만드는 팀, Team-Seuk의 멤버." />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" />
+    <script type="module" src="/src/pages/members.ts"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+    <div class="seuk-progress" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="site-logo" href="../">SEUK<span class="logo-dot">.</span></a>
+      <nav class="site-nav" aria-label="주요 메뉴">
+        <a href="../">메인</a>
+        <a href="../projects/">프로젝트</a>
+        <a href="./" aria-current="page">멤버</a>
+        <a href="../log/">개발 일지</a>
+        <a href="https://github.com/Team-Seuk" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </header>
+    <main id="main">
+      <!-- 팀 서사 히어로 -->
+      <section class="members-hero container">
+        <p class="members-eyebrow seuk-reveal">Team-Seuk / Members</p>
+        <h1 class="members-title seuk-reveal seuk-skew" data-seuk-delay="1">
+          다섯 명, 역할은 <span class="accent-word">유동.</span>
+        </h1>
+        <div class="members-lede seuk-reveal" data-seuk-delay="2">
+          <p>
+            Team-Seuk의 다섯 명에게 고정된 직함은 없습니다. 기획이 밀리면 개발자가 화면 흐름을
+            그리고, 프론트가 바쁘면 백엔드가 붙습니다. 지금 병목인 일이 곧 그 사람의 역할입니다.
+          </p>
+          <p>
+            순서도 단순합니다. 문서보다 굴러가는 데모를 먼저 만들고, 눈앞에서 돌아가는 화면을 보며
+            방향을 조정합니다. 해커톤의 제한 시간 안에서 이 방식이 가장 빨랐고, 지금도 그렇게
+            일합니다.
+          </p>
+          <p>그렇게 두 개의 프로젝트를 완성했습니다. 아래 다섯 명이 그 팀입니다.</p>
+        </div>
+      </section>
+
+      <!-- 숫자 스트립 — 실데이터만 -->
+      <section class="members-stats" aria-label="팀 현황">
+        <div class="container">
+          <dl class="stats-list">
+            <div class="stat seuk-reveal">
+              <dt>멤버</dt>
+              <dd>5</dd>
+            </div>
+            <div class="stat seuk-reveal" data-seuk-delay="1">
+              <dt>프로젝트</dt>
+              <dd>2</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- 풀 프로필 ×5
+           멤버 확정 시: 각 카드에서 아바타 이니셜(S1~S5)·이름·역할·한 줄 소개 텍스트와
+           GitHub href(현재 org 링크로 임시)만 교체. 마크업 구조 변경 불필요. -->
+      <section class="members-roster container" aria-labelledby="roster-title">
+        <h2 id="roster-title" class="seuk-reveal">지금의 다섯 명</h2>
+        <ul class="member-grid">
+          <li class="member-card seuk-reveal">
+            <span class="member-avatar" aria-hidden="true">S1</span>
+            <h3 class="member-name">멤버 이름(확정 대기)</h3>
+            <p class="member-role">역할(확정 대기)</p>
+            <p class="member-bio">한 줄 소개가 들어갈 자리 — 확정되면 이 문장만 교체.</p>
+            <a class="member-link" href="https://github.com/Team-Seuk" target="_blank" rel="noopener">GitHub ↗</a>
+          </li>
+          <li class="member-card seuk-reveal" data-seuk-delay="1">
+            <span class="member-avatar" aria-hidden="true">S2</span>
+            <h3 class="member-name">멤버 이름(확정 대기)</h3>
+            <p class="member-role">역할(확정 대기)</p>
+            <p class="member-bio">한 줄 소개가 들어갈 자리 — 확정되면 이 문장만 교체.</p>
+            <a class="member-link" href="https://github.com/Team-Seuk" target="_blank" rel="noopener">GitHub ↗</a>
+          </li>
+          <li class="member-card seuk-reveal" data-seuk-delay="2">
+            <span class="member-avatar" aria-hidden="true">S3</span>
+            <h3 class="member-name">멤버 이름(확정 대기)</h3>
+            <p class="member-role">역할(확정 대기)</p>
+            <p class="member-bio">한 줄 소개가 들어갈 자리 — 확정되면 이 문장만 교체.</p>
+            <a class="member-link" href="https://github.com/Team-Seuk" target="_blank" rel="noopener">GitHub ↗</a>
+          </li>
+          <li class="member-card seuk-reveal" data-seuk-delay="1">
+            <span class="member-avatar" aria-hidden="true">S4</span>
+            <h3 class="member-name">멤버 이름(확정 대기)</h3>
+            <p class="member-role">역할(확정 대기)</p>
+            <p class="member-bio">한 줄 소개가 들어갈 자리 — 확정되면 이 문장만 교체.</p>
+            <a class="member-link" href="https://github.com/Team-Seuk" target="_blank" rel="noopener">GitHub ↗</a>
+          </li>
+          <li class="member-card seuk-reveal" data-seuk-delay="2">
+            <span class="member-avatar" aria-hidden="true">S5</span>
+            <h3 class="member-name">멤버 이름(확정 대기)</h3>
+            <p class="member-role">역할(확정 대기)</p>
+            <p class="member-bio">한 줄 소개가 들어갈 자리 — 확정되면 이 문장만 교체.</p>
+            <a class="member-link" href="https://github.com/Team-Seuk" target="_blank" rel="noopener">GitHub ↗</a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 연락 -->
+      <section class="members-contact container" aria-labelledby="contact-title">
+        <h2 id="contact-title" class="seuk-reveal">
+          같이 <span class="accent-word">슥</span> 만들어볼까요?
+        </h2>
+        <p class="contact-lede seuk-reveal" data-seuk-delay="1">
+          프로젝트 제안, 해커톤 팀 빌딩, 가벼운 커피챗까지 — 메일 한 통이면 충분합니다.
+        </p>
+        <div class="contact-links seuk-reveal" data-seuk-delay="2">
+          <a class="contact-mail" href="mailto:team@example.com">team@example.com</a>
+          <a class="contact-github" href="https://github.com/Team-Seuk" target="_blank" rel="noopener"
+            >GitHub — Team-Seuk</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>© Team-Seuk</p>
+      <p>
+        <a href="https://github.com/Team-Seuk" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="mailto:team@example.com">team@example.com</a>
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,452 @@
+/* 프로젝트 상세 공유 템플릿 — projects/yaksok · projects/stock-ai
+   섹션: 히어로 / 문제→해결 / 핵심 기능(구상) / 기술 / 역할 / 회고 / 다음 프로젝트 */
+
+/* ── 섹션 공통 ── */
+
+.p-section {
+  border-top: 1px solid var(--border);
+  padding-block: var(--sp-3xl);
+}
+
+@media (min-width: 768px) {
+  .p-section {
+    padding-block: var(--sp-4xl);
+  }
+}
+
+.p-eyebrow {
+  display: block;
+  margin-bottom: var(--sp-md);
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.p-section-title {
+  margin-bottom: var(--sp-xl);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-h2);
+}
+
+/* ── 프로젝트 히어로 ── */
+
+.p-hero {
+  padding-block: calc(var(--sp-4xl) + var(--sp-2xl)) var(--sp-3xl);
+}
+
+@media (min-width: 768px) {
+  .p-hero {
+    padding-block: calc(var(--sp-4xl) + var(--sp-3xl)) var(--sp-4xl);
+  }
+}
+
+.p-title {
+  margin-bottom: var(--sp-lg);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-h1);
+  letter-spacing: -0.01em;
+}
+
+/* velocity 스큐는 내부 스팬에 — .seuk-reveal의 transform과 충돌 방지 */
+.p-title-text {
+  display: inline-block;
+}
+
+.p-title-note {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--fs-h3);
+  letter-spacing: 0;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.p-status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-sm);
+  margin-bottom: var(--sp-lg);
+  padding: var(--sp-xs) var(--sp-md);
+  border: 1px solid var(--accent-deep);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--accent-deep);
+}
+
+.p-status::before {
+  content: '';
+  width: var(--sp-sm);
+  height: var(--sp-sm);
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.p-def {
+  max-width: 40ch;
+  margin-bottom: var(--sp-xl);
+  font-size: var(--fs-h3);
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.p-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-sm);
+  margin: 0 0 var(--sp-xl);
+  padding: 0;
+  list-style: none;
+}
+
+.p-tags:last-child {
+  margin-bottom: 0;
+}
+
+.p-tags li {
+  padding: var(--sp-xs) var(--sp-md);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-elev);
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  color: var(--text-dim);
+}
+
+.p-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-md);
+}
+
+.p-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-sm);
+  min-height: var(--sp-2xl);
+  padding: var(--sp-sm) var(--sp-lg);
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: var(--fs-body);
+  text-decoration: none;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.p-btn--primary {
+  background: var(--accent-deep);
+  color: var(--bg);
+}
+
+.p-btn--primary:hover {
+  transform: translateY(-2px);
+}
+
+/* ── 문제 → 해결 ── */
+
+.p-duo {
+  display: grid;
+  gap: var(--sp-md);
+}
+
+@media (min-width: 768px) {
+  .p-duo {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--sp-lg);
+  }
+}
+
+.p-duo-col {
+  padding: var(--sp-lg);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+}
+
+.p-duo-col h3 {
+  margin-bottom: var(--sp-md);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-h3);
+}
+
+.p-duo-col p {
+  max-width: 65ch;
+}
+
+.p-duo-col--solve {
+  border-color: var(--accent-line);
+  background: var(--accent-soft);
+}
+
+.p-duo-col--solve h3 {
+  color: var(--accent-deep);
+}
+
+/* ── 핵심 기능 / 구상 중인 것 ── */
+
+.p-features {
+  display: grid;
+  gap: var(--sp-2xl);
+}
+
+.p-feature {
+  display: grid;
+  gap: var(--sp-lg);
+  align-items: center;
+}
+
+.p-feature-body h3 {
+  margin-bottom: var(--sp-sm);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-h3);
+}
+
+.p-feature-body p {
+  max-width: 65ch;
+}
+
+@media (min-width: 768px) {
+  .p-features {
+    gap: var(--sp-3xl);
+  }
+
+  .p-feature {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: var(--sp-2xl);
+  }
+
+  /* 좌우 교차 — 짝수 행은 텍스트가 왼쪽 */
+  .p-feature:nth-child(even) {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  }
+
+  .p-feature:nth-child(even) .p-frame-slot {
+    order: 2;
+  }
+}
+
+/* CSS 폰 프레임 플레이스홀더 — 스크린샷 확정 시 img로 교체 */
+.p-frame-slot {
+  display: flex;
+}
+
+.p-frame {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(240px, 100%);
+  aspect-ratio: 9 / 19;
+  padding: var(--sp-lg);
+  border: 1px solid var(--border-strong);
+  border-radius: calc(var(--radius) * 2);
+  background: var(--bg-elev);
+}
+
+.p-frame::before {
+  /* 스피커 바 */
+  content: '';
+  position: absolute;
+  top: var(--sp-md);
+  left: 50%;
+  width: var(--sp-2xl);
+  height: var(--sp-xs);
+  border-radius: 999px;
+  background: var(--border-strong);
+  transform: translateX(-50%);
+}
+
+.p-frame-note {
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  color: var(--text-dim);
+  text-align: center;
+}
+
+/* 구상 단계 변형 — 점선 */
+.p-frame--idea {
+  border-style: dashed;
+  background: var(--bg);
+}
+
+/* ── 기술 ── */
+
+.p-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-sm);
+  margin: 0 0 var(--sp-xl);
+  padding: 0;
+  list-style: none;
+}
+
+.p-stack li {
+  padding: var(--sp-xs) var(--sp-md);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) / 2);
+  background: var(--bg-elev);
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+}
+
+.p-tech-note {
+  max-width: 65ch;
+  margin-bottom: var(--sp-lg);
+  font-size: var(--fs-small);
+  color: var(--text-dim);
+}
+
+.p-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-sm) var(--sp-md);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-h3);
+}
+
+/* 화살표 글리프 — 그래픽 취급, --accent 허용 */
+.p-flow-arrow {
+  color: var(--accent);
+}
+
+/* ── 역할 분담 ── */
+
+.p-roles {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--border);
+  list-style: none;
+}
+
+.p-role {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: var(--sp-md);
+  row-gap: var(--sp-xs);
+  align-items: center;
+  padding-block: var(--sp-md);
+  border-bottom: 1px solid var(--border);
+}
+
+.p-role-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  grid-row: 1 / 3;
+  width: var(--sp-2xl);
+  height: var(--sp-2xl);
+  border-radius: 50%;
+  background: var(--accent-soft);
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--accent-deep);
+}
+
+.p-role-name {
+  font-weight: 700;
+}
+
+.p-role-duty {
+  font-size: var(--fs-small);
+  color: var(--text-dim);
+}
+
+@media (min-width: 768px) {
+  .p-role {
+    grid-template-columns: auto minmax(0, 1fr) minmax(0, 1.6fr);
+    column-gap: var(--sp-lg);
+  }
+
+  .p-role-avatar {
+    grid-row: auto;
+  }
+
+  .p-role-duty {
+    font-size: var(--fs-body);
+  }
+}
+
+/* ── 회고 ── */
+
+.p-retro-body {
+  display: grid;
+  gap: var(--sp-md);
+  max-width: 65ch;
+  padding-left: var(--sp-lg);
+  border-left: 3px solid var(--accent-line);
+}
+
+.p-retro-note {
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  color: var(--text-dim);
+}
+
+/* ── 다음 프로젝트 ── */
+
+.p-next-link {
+  display: block;
+  padding-block: var(--sp-3xl);
+  background: var(--bg-elev);
+  text-decoration: none;
+  transition: background var(--duration-fast) var(--ease-out);
+}
+
+.p-next-link .p-eyebrow {
+  margin-bottom: var(--sp-sm);
+  /* --bg-elev 위에서 --accent-deep은 소형 텍스트 AA 미달 → text-dim */
+  color: var(--text-dim);
+}
+
+.p-next-title {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-h2);
+  color: var(--text);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.p-next-arrow {
+  display: inline-block;
+  color: var(--accent);
+  transition: transform var(--duration-normal) var(--ease-spring);
+}
+
+.p-next-link:hover {
+  background: var(--accent-soft);
+}
+
+/* fs-h2(30px+) 볼드 — --accent 허용 범위 */
+.p-next-link:hover .p-next-title {
+  color: var(--accent);
+}
+
+.p-next-link:hover .p-next-arrow {
+  transform: translateX(var(--sp-sm));
+}
+
+/* ── 모션 가드 ── */
+
+@media (prefers-reduced-motion: reduce) {
+  .p-btn,
+  .p-next-link,
+  .p-next-title,
+  .p-next-arrow {
+    transition: none;
+  }
+
+  .p-btn--primary:hover,
+  .p-next-link:hover .p-next-arrow {
+    transform: none;
+  }
+}
