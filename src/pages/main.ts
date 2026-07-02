@@ -1,6 +1,3 @@
-import '../styles/theme.css'
-import '../styles/base.css'
-import '../styles/main.css'
 import { initSeuk } from '../scripts/seuk'
 
 initSeuk()

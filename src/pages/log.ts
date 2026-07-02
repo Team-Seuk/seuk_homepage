@@ -1,6 +1,3 @@
-import '../styles/theme.css'
-import '../styles/base.css'
-import '../styles/log.css'
 import { initSeuk } from '../scripts/seuk'
 import { devlog } from '../data/devlog'
 
