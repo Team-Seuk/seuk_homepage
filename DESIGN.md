@@ -61,3 +61,4 @@ signature: "'슥' 모션 문법 — 왼→오 등장 통일 + 스크롤 velocity
 - [ ] 멤버 5인 실명·역할·한 줄·개인 링크 (현재 플레이스홀더)
 - [ ] 팀 대표 이메일 (현재 placeholder)
 - [ ] Yaksok repo 공개 링크 확인 (github.com/Team-Seuk/Yaksok 가정)
+- [ ] 도메인 연결 확인 — Vercel에 `team.seuk.cloud` 추가 + Gabia CNAME(`team`) 등록 후 https 열리는지 (2026-07-02 안내 완료, 확인 대기)
