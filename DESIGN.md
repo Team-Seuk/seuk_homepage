@@ -6,7 +6,7 @@
 
 - **환경:** 반응형 웹 (모바일 우선 → 데스크탑 확장)
 - **실행:** Claude 인라인 직접 구현 (외부 틀 없음)
-- **스택:** Vite + vanilla TS 멀티페이지 · 배포 Vercel + seuk.cloud (`base: '/'`)
+- **스택:** Vite + vanilla TS 멀티페이지 · 배포 Vercel + team.seuk.cloud (`base: '/'`) — apex seuk.cloud는 별도 프로젝트가 사용 중
 
 ## §1 프로젝트 결정 (확정)
 
