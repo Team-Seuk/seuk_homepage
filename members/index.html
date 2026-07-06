@@ -62,49 +62,144 @@
               <dd>2</dd>
             </div>
           </dl>
-        </div>
+        </div> 
       </section>
 
-      <!-- 풀 프로필 ×5
-           멤버 확정 시: 각 카드에서 아바타 이니셜(S1~S5)·이름·역할·한 줄 소개 텍스트와
-           GitHub href(현재 org 링크로 임시)만 교체. 마크업 구조 변경 불필요. -->
+      <!-- 풀 프로필 ×5 — 전부 플레이스홀더(확정 대기).
+           멤버 확정 시 각 카드에서만 교체:
+             .member-avatar 이니셜(또는 <img>로) · .member-role(EN 역할)
+             · .member-name 국문 + .member-name-en 영문 · .member-badge 카테고리
+             · .member-skills 칩 · .member-bio 소개 · 이메일/GitHub href·표시.
+           마크업 구조는 그대로 두면 된다. -->
       <section class="members-roster container" aria-labelledby="roster-title">
         <h2 id="roster-title" class="seuk-reveal">지금의 다섯 명</h2>
         <ul class="member-grid">
           <li class="member-card seuk-reveal">
-            <span class="member-avatar" aria-hidden="true">S1</span>
-            <h3 class="member-name">멤버 이름(확정 대기)</h3>
-            <p class="member-role">역할(확정 대기)</p>
-            <p class="member-bio">한 줄 소개가 들어갈 자리 — 확정되면 이 문장만 교체.</p>
-            <a class="member-link" href="https://github.com/Team-Seuk" target="_blank" rel="noopener">GitHub ↗</a>
+            <span class="member-badge">확정 대기</span>
+            <div class="member-head">
+              <span class="member-avatar"><img src="/members/s1_image.jpg" alt="음머 프로필 사진" /></span>
+              <div class="member-ident">
+                <p class="member-role">ROLE — TBD</p>
+                <h3 class="member-name">음머<span class="member-name-en">Member Name</span></h3>
+              </div>
+            </div>
+            <ul class="member-skills" aria-label="기술 스택">
+              <li>스킬</li>
+              <li>스킬</li>
+              <li>스킬</li>
+            </ul>
+            <p class="member-bio">
+              소(Cow)와 파이썬을 좋아하는 개발자입니다. 에이전틱 AI와 웹에 흥미가 있습니다.
+              현재는 에이전트 '레인' 개발에 집중하고 있습니다.
+            </p>
+            <button class="member-more" type="button" aria-expanded="false">
+              <span class="member-more-label">더 보기</span><span class="member-more-icon" aria-hidden="true">⌄</span>
+            </button>
+            <div class="member-links">
+              <a class="member-contact" href="mailto:fennec925@gmail.com">fennec925@gmail.com</a>
+              <a class="member-link" href="https://github.com/bestcow" target="_blank" rel="noopener">github ↗</a>
+            </div>
           </li>
           <li class="member-card seuk-reveal" data-seuk-delay="1">
-            <span class="member-avatar" aria-hidden="true">S2</span>
-            <h3 class="member-name">멤버 이름(확정 대기)</h3>
-            <p class="member-role">역할(확정 대기)</p>
-            <p class="member-bio">한 줄 소개가 들어갈 자리 — 확정되면 이 문장만 교체.</p>
-            <a class="member-link" href="https://github.com/Team-Seuk" target="_blank" rel="noopener">GitHub ↗</a>
+            <span class="member-badge">확정 대기</span>
+            <div class="member-head">
+              <span class="member-avatar" aria-hidden="true">S2</span>
+              <div class="member-ident">
+                <p class="member-role">ROLE — TBD</p>
+                <h3 class="member-name">suvisdev<span class="member-name-en">Member Name</span></h3>
+              </div>
+            </div>
+            <ul class="member-skills" aria-label="기술 스택">
+              <li>스킬</li>
+              <li>스킬</li>
+              <li>스킬</li>
+            </ul>
+            <p class="member-bio">
+              복잡함은 걷어내고, 확장은 자유롭게.  (차차 생각나면 바꿀예정)
+            </p>
+            <button class="member-more" type="button" aria-expanded="false">
+              <span class="member-more-label">더 보기</span><span class="member-more-icon" aria-hidden="true">⌄</span>
+            </button>
+            <div class="member-links">
+              <a class="member-contact" href="mailto:ssuvisdev@gmail.com">ssuvisdev@gmail.com</a>
+              <a class="member-link" href="https://github.com/suvisdev" target="_blank" rel="noopener">github ↗</a>
+            </div>
           </li>
           <li class="member-card seuk-reveal" data-seuk-delay="2">
-            <span class="member-avatar" aria-hidden="true">S3</span>
-            <h3 class="member-name">멤버 이름(확정 대기)</h3>
-            <p class="member-role">역할(확정 대기)</p>
-            <p class="member-bio">한 줄 소개가 들어갈 자리 — 확정되면 이 문장만 교체.</p>
-            <a class="member-link" href="https://github.com/Team-Seuk" target="_blank" rel="noopener">GitHub ↗</a>
+            <span class="member-badge">확정 대기</span>
+            <div class="member-head">
+              <span class="member-avatar"><img src="/members/s3_image.jfif" alt="friendship 프로필 사진" /></span>
+              <div class="member-ident">
+                <p class="member-role">ROLE — TBD</p>
+                <h3 class="member-name">friendship<span class="member-name-en">Member Name</span></h3>
+              </div>
+            </div>
+            <ul class="member-skills" aria-label="기술 스택">
+              <li>스킬</li>
+              <li>스킬</li>
+              <li>스킬</li>
+            </ul>
+            <p class="member-bio">
+              watch me andre kapathy.
+            </p>
+            <button class="member-more" type="button" aria-expanded="false">
+              <span class="member-more-label">더 보기</span><span class="member-more-icon" aria-hidden="true">⌄</span>
+            </button>
+            <div class="member-links">
+              <a class="member-contact" href="mailto:dnwjdwkd11@gmail.com">dnwjdwkd11@gmail.com</a>
+              <a class="member-link" href="https://github.com/woojeongalex" target="_blank" rel="noopener">handle ↗</a>
+            </div>
           </li>
           <li class="member-card seuk-reveal" data-seuk-delay="1">
-            <span class="member-avatar" aria-hidden="true">S4</span>
-            <h3 class="member-name">멤버 이름(확정 대기)</h3>
-            <p class="member-role">역할(확정 대기)</p>
-            <p class="member-bio">한 줄 소개가 들어갈 자리 — 확정되면 이 문장만 교체.</p>
-            <a class="member-link" href="https://github.com/Team-Seuk" target="_blank" rel="noopener">GitHub ↗</a>
+            <span class="member-badge">확정 대기</span>
+            <div class="member-head">
+              <span class="member-avatar" aria-hidden="true">S4</span>
+              <div class="member-ident">
+                <p class="member-role">ROLE — TBD</p>
+                <h3 class="member-name">말랑님(확정x)<span class="member-name-en">Member Name</span></h3>
+              </div>
+            </div>
+            <ul class="member-skills" aria-label="기술 스택">
+              <li>스킬</li>
+              <li>스킬</li>
+              <li>스킬</li>
+            </ul>
+            <p class="member-bio">
+              한 줄 소개가 들어갈 자리입니다. 멤버가 확정되면 이 문단만 실제 소개로 교체하세요.
+              어떤 문제를 즐겨 풀고 팀에서 어떤 순간에 가장 빛나는지 두세 문장으로 적으면 됩니다.
+            </p>
+            <button class="member-more" type="button" aria-expanded="false">
+              <span class="member-more-label">더 보기</span><span class="member-more-icon" aria-hidden="true">⌄</span>
+            </button>
+            <div class="member-links">
+              <a class="member-contact" href="mailto:team@example.com">member@team.dev</a>
+              <a class="member-link" href="https://github.com/Team-Seuk" target="_blank" rel="noopener">github ↗</a>
+            </div>
           </li>
           <li class="member-card seuk-reveal" data-seuk-delay="2">
-            <span class="member-avatar" aria-hidden="true">S5</span>
-            <h3 class="member-name">멤버 이름(확정 대기)</h3>
-            <p class="member-role">역할(확정 대기)</p>
-            <p class="member-bio">한 줄 소개가 들어갈 자리 — 확정되면 이 문장만 교체.</p>
-            <a class="member-link" href="https://github.com/Team-Seuk" target="_blank" rel="noopener">GitHub ↗</a>
+            <span class="member-badge">확정 대기</span>
+            <div class="member-head">
+              <span class="member-avatar" aria-hidden="true">S5</span>
+              <div class="member-ident">
+                <p class="member-role">ROLE — TBD</p>
+                <h3 class="member-name">밍뚜<span class="member-name-en">Member Name</span></h3>
+              </div>
+            </div>
+            <ul class="member-skills" aria-label="기술 스택">
+              <li>스킬</li>
+              <li>스킬</li>
+              <li>스킬</li>
+            </ul>
+            <p class="member-bio">
+              열심히 하겠습니다. (추후 수정예정)
+            </p>
+            <button class="member-more" type="button" aria-expanded="false">
+              <span class="member-more-label">더 보기</span><span class="member-more-icon" aria-hidden="true">⌄</span>
+            </button>
+            <div class="member-links">
+              <a class="member-contact" href="mailto:minmom7898@gmail.com">minmom7898@gmail.com</a>
+              <a class="member-link" href="https://github.com/minahdev" target="_blank" rel="noopener">github ↗</a>
+            </div>
           </li>
         </ul>
       </section>
@@ -118,7 +213,7 @@
           프로젝트 제안, 해커톤 팀 빌딩, 가벼운 커피챗까지 — 메일 한 통이면 충분합니다.
         </p>
         <div class="contact-links seuk-reveal" data-seuk-delay="2">
-          <a class="contact-mail" href="mailto:team@example.com">team@example.com</a>
+          <a class="contact-mail" href="mailto:seukathon@gmail.com">seukathon@gmail.com</a>
           <a class="contact-github" href="https://github.com/Team-Seuk" target="_blank" rel="noopener"
             >GitHub — Team-Seuk</a
           >
@@ -129,7 +224,7 @@
       <p>© Team-Seuk</p>
       <p>
         <a href="https://github.com/Team-Seuk" target="_blank" rel="noopener">GitHub</a> ·
-        <a href="mailto:team@example.com">team@example.com</a>
+        <a href="mailto:seukathon@gmail.com">seukathon@gmail.com</a>
       </p>
     </footer>
   </body>
